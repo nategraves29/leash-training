@@ -228,16 +228,72 @@
             font-weight: 600;
             margin-left: 10px;
         }
+
+
+               /* Top Navigation Bar */
+        .top-nav {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background: #0077B6;
+            padding: 18px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: padding 0.25s ease, background 0.25s ease;
+        }
+        
+        .top-nav.shrink {
+            padding: 6px 0; /* smaller once scrolled */
+            background: #005f8f; /* slightly darker if you want */
+        }        
+        
+        .top-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+        
+        .top-nav li a {
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            transition: background 0.2s ease;
+        }
+        
+        .top-nav li a:hover {
+            background: #00A0DC;
+        }
+        
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }    
     </style>
 </head>
 <body>
+
+        <!-- Navigation Bar -->
+<nav class="top-nav">
+    <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#lmw">Lead Management</a></li>
+        <li><a href="#ocp">Outbound Calls</a></li>
+        <li><a href="#tbp">Trial Booking</a></li>
+        <li><a href="#tcf">Trial Conversion</a></li>
+        <li><a href="#kc">Knowledge Check</a></li>
+    </ul>
+</nav>
     <div class="container">
         <div class="header">
             <h1>LEASH TRAINING GUIDE</h1>
             <div class="module-subtitle">Lead Engagement and Support Hub</div>
         </div>
 
-        <h2>INTRODUCTION</h2>
+        <h2 id="introduction">INTRODUCTION</h2>
         <p class="intro-text">This training guide will teach you how to effectively work in the LEASH role at Scenthound. LEASH is the frontline connection between potential customers and our Scenters, managing leads, booking trials, and ensuring every customer receives excellent service from their very first interaction.</p>
 
         <h2>DAILY SETUP & WORKSPACE ORGANIZATION</h2>
@@ -276,7 +332,7 @@
             Experiment with your own arrangement. The key is finding a layout that prevents overwhelm when multiple tasks demand attention simultaneously. Keep all tabs and applications open when closing your laptop so everything reopens in the correct position the next day. <em>Mise en place</em> - everything in its place.
         </div>
 
-        <h2>LEAD MANAGEMENT WORKFLOW</h2>
+        <h2 id="lmw">LEAD MANAGEMENT WORKFLOW</h2>
 
         <h3>Daily Start Routine</h3>
         
@@ -310,7 +366,7 @@
             • Feel free to experiment with a workflow that fits your style, but make sure Active Trial Leads are always contacted in the correct call and text order.
         </div>
 
-        <h2>OUTBOUND CALL PROTOCOL</h2>
+        <h2 id="ocp">OUTBOUND CALL PROTOCOL</h2>
 
         <h3>Contact Sequence</h3>
 
@@ -368,7 +424,7 @@
             <i>"You cannot control the behavior of others, but you can always choose how you respond to it." ⏤ Roy T. Bennett</i>
         </div>
 
-        <h2>TRIAL BOOKING PROCESS</h2>
+        <h2 id="tbp">TRIAL BOOKING PROCESS</h2>
 
         <h3>Required Information Checklist</h3>
         <p>When a lead converts and wants to book a trial appointment, collect the following information to complete their MyTime profile:</p>
@@ -447,7 +503,7 @@
             Understand what they're hoping to achieve from the trial and ongoing services. This helps the team tailor their approach.
         </div>
 
-        <h2>TRIAL CONVERSION FORMS</h2>
+        <h2 id="tcf">TRIAL CONVERSION FORMS</h2>
 
         <div class="warning-box">
             <strong>Non-Negotiable Rule:</strong><br>
@@ -532,7 +588,7 @@
         </div>
 
         <div style="background: #f0f9ff; border: 3px solid #00A0DC; padding: 30px; margin: 40px 0 0 0; border-radius: 8px; text-align: center;">
-            <h2 style="color: #00A0DC; margin-top: 0;">Ready to Test Your Knowledge?</h2>
+            <h2 style="color: #00A0DC; margin-top: 0;" id="kc">Ready to Test Your Knowledge?</h2>
             <p style="font-size: 1.1em; color: #555; margin: 20px 0;">Complete the LEASH Role Knowledge Check to demonstrate your understanding of the training material.</p>
             
             <a href="https://forms.gle/XdBXKQ2pWHkJJVUH8" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #00A0DC 0%, #0077B6 100%); color: white; padding: 15px 40px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1em; margin-top: 10px; transition: transform 0.2s;">
