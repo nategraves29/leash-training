@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEASH Training Guide - Scenthound</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
@@ -16,16 +17,16 @@
             padding: 0;
             background: #f8f8f8;
         }
-        
+
         .container {
             background: white;
             padding: 50px;
             border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             max-width: 100%;
             margin: 0;
         }
-        
+
         .header {
             background: linear-gradient(135deg, #00A0DC 0%, #0077B6 100%);
             color: white;
@@ -34,21 +35,21 @@
             margin-bottom: 40px;
             text-align: center;
         }
-        
+
         h1 {
             margin: 0;
             font-size: 2.2em;
             font-weight: 700;
             letter-spacing: 1px;
         }
-        
+
         .module-subtitle {
             font-size: 1.1em;
             opacity: 0.9;
             font-weight: 400;
             margin-top: 5px;
         }
-        
+
         h2 {
             color: #00A0DC;
             font-size: 1.8em;
@@ -58,7 +59,7 @@
             border-bottom: 3px solid #00A0DC;
             padding-bottom: 10px;
         }
-        
+
         h3 {
             color: #0077B6;
             font-size: 1.3em;
@@ -66,7 +67,7 @@
             margin-bottom: 12px;
             font-weight: 600;
         }
-        
+
         h4 {
             color: #00A0DC;
             font-size: 1.1em;
@@ -74,7 +75,7 @@
             margin-bottom: 10px;
             font-weight: 600;
         }
-        
+
         .info-box {
             background: #f0f9ff;
             border-left: 5px solid #00A0DC;
@@ -82,7 +83,7 @@
             margin: 20px 0;
             border-radius: 6px;
         }
-        
+
         .highlight-box {
             background: #e6f7ff;
             border-left: 5px solid #FF6B35;
@@ -90,7 +91,7 @@
             margin: 20px 0;
             border-radius: 6px;
         }
-        
+
         .warning-box {
             background: #fff8f0;
             border: 2px solid #FF6B35;
@@ -98,7 +99,7 @@
             margin: 20px 0;
             border-radius: 8px;
         }
-        
+
         .tip {
             background: #fff8f0;
             padding: 15px;
@@ -107,7 +108,7 @@
             margin: 20px 0;
             font-style: italic;
         }
-        
+
         .tip::before {
             content: '💡 Pro Tip: ';
             font-weight: 700;
@@ -116,7 +117,7 @@
         }
 
         .btw {
-             background: #fff8f0;
+            background: #fff8f0;
             padding: 15px;
             border-left: 4px solid #FF6B35;
             border-radius: 6px;
@@ -126,26 +127,26 @@
         }
 
         .btw::before {
-              content: '🐶 BTW: ';
+            content: '🐶 BTW: ';
             font-weight: 700;
             font-style: normal;
             color: #FF6B35;
         }
-        
+
         .day-sequence {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             margin: 25px 0;
         }
-        
+
         .day-card {
             background: #f0f9ff;
             border-left: 5px solid #00A0DC;
             border-radius: 6px;
             padding: 20px;
         }
-        
+
         .day-number {
             background: #FF6B35;
             color: white;
@@ -156,12 +157,12 @@
             margin-bottom: 15px;
             text-align: center;
         }
-        
+
         .checklist {
             list-style: none;
             padding: 0;
         }
-        
+
         .checklist li {
             padding: 12px 15px 12px 45px;
             margin: 10px 0;
@@ -169,7 +170,7 @@
             border-radius: 6px;
             position: relative;
         }
-        
+
         .checklist li::before {
             content: '✓';
             position: absolute;
@@ -178,26 +179,26 @@
             font-weight: bold;
             font-size: 1.2em;
         }
-        
+
         ul {
             margin: 10px 0;
             padding-left: 25px;
         }
-        
+
         li {
             margin: 8px 0;
             line-height: 1.6;
         }
-        
+
         strong {
             color: #0077B6;
         }
-        
+
         .emphasis {
             color: #FF6B35;
             font-weight: 700;
         }
-        
+
         .closing-box {
             background: linear-gradient(135deg, #00A0DC 0%, #0077B6 100%);
             color: white;
@@ -205,19 +206,19 @@
             border-radius: 8px;
             margin: 30px 0;
         }
-        
+
         .closing-box h2 {
             color: white;
-            border-bottom-color: rgba(255,255,255,0.3);
+            border-bottom-color: rgba(255, 255, 255, 0.3);
         }
-        
+
         .intro-text {
             font-size: 1.05em;
             line-height: 1.8;
             color: #555;
             margin-bottom: 30px;
         }
-        
+
         .badge {
             display: inline-block;
             background: #FF6B35;
@@ -230,22 +231,24 @@
         }
 
 
-               /* Top Navigation Bar */
+        /* Top Navigation Bar */
         .top-nav {
             position: sticky;
             top: 0;
             z-index: 999;
             background: #0077B6;
             padding: 18px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             transition: padding 0.25s ease, background 0.25s ease;
         }
-        
+
         .top-nav.shrink {
-            padding: 6px 0; /* smaller once scrolled */
-            background: #005f8f; /* slightly darker if you want */
-        }        
-        
+            padding: 6px 0;
+            /* smaller once scrolled */
+            background: #005f8f;
+            /* slightly darker if you want */
+        }
+
         .top-nav ul {
             list-style: none;
             margin: 0;
@@ -254,7 +257,7 @@
             justify-content: center;
             gap: 25px;
         }
-        
+
         .top-nav li a {
             color: white;
             font-weight: 600;
@@ -263,20 +266,20 @@
             border-radius: 4px;
             transition: background 0.2s ease;
         }
-        
+
         .top-nav li a:hover {
             background: #00A0DC;
         }
-        
+
         /* Smooth Scrolling */
         html {
             scroll-behavior: smooth;
-        }    
+        }
 
         /* Adjusting nav bar scroll margin */
         h2 {
-    scroll-margin-top: 90px;
-            }
+            scroll-margin-top: 90px;
+        }
 
         /* Back to Top Button */
         #backToTop {
@@ -290,36 +293,36 @@
             padding: 10px 14px;
             border-radius: 50%;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.3s ease, transform 0.2s ease;
         }
-        
+
         #backToTop:hover {
             transform: translateY(-3px);
         }
-        
+
         #backToTop.show {
             opacity: 1;
             pointer-events: auto;
         }
-
     </style>
 </head>
+
 <body>
 
-        <!-- Navigation Bar -->
-<nav class="top-nav">
-    <ul>
-        <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#lmw">Lead Management</a></li>
-        <li><a href="#ocp">Outbound Calls</a></li>
-        <li><a href="#tbp">Trial Booking</a></li>
-        <li><a href="#tcf">Trial Conversion</a></li>
-        <li><a href="#kc">Knowledge Check</a></li>
-    </ul>
-</nav>
+    <!-- Navigation Bar -->
+    <nav class="top-nav">
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#lmw">Lead Management</a></li>
+            <li><a href="#ocp">Outbound Calls</a></li>
+            <li><a href="#tbp">Trial Booking</a></li>
+            <li><a href="#tcf">Trial Conversion</a></li>
+            <li><a href="#kc">Knowledge Check</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <div class="header">
             <h1>LEASH TRAINING GUIDE</h1>
@@ -327,13 +330,17 @@
         </div>
 
         <h2 id="introduction">INTRODUCTION</h2>
-        <p class="intro-text">This training guide will teach you how to effectively work in the LEASH role at Scenthound. LEASH is the frontline connection between potential customers and our Scenters, managing leads, booking trials, and ensuring every customer receives excellent service from their very first interaction.</p>
+        <p class="intro-text">This training guide will teach you how to effectively work in the LEASH role at
+            Scenthound. LEASH is the frontline connection between potential customers and our Scenters, managing leads,
+            booking trials, and ensuring every customer receives excellent service from their very first interaction.
+        </p>
 
         <h2>DAILY SETUP & WORKSPACE ORGANIZATION</h2>
-        
+
         <h3>Browser Configuration</h3>
-        <p>Each Scenter requires separate browser instances because you cannot log into multiple FOSA and SMS Magic accounts in the same browser.</p>
-        
+        <p>Each Scenter requires separate browser instances because you cannot log into multiple FOSA and SMS Magic
+            accounts in the same browser.</p>
+
         <div class="highlight-box">
             <strong>Required Setup:</strong><br>
             • <strong>Browser 1 (Edge):</strong> Scenter 1 - FOSA + SMS Magic<br>
@@ -342,7 +349,7 @@
         </div>
 
         <h3>Monitor Layout Recommendations</h3>
-        
+
         <div class="info-box">
             <strong>Two-Monitor Setup:</strong><br>
             <strong>Monitor 1 (Large):</strong> Two Scenters' browsers (split screen)<br>
@@ -362,13 +369,15 @@
         </ul>
 
         <div class="tip">
-            Experiment with your own arrangement. The key is finding a layout that prevents overwhelm when multiple tasks demand attention simultaneously. Keep all tabs and applications open when closing your laptop so everything reopens in the correct position the next day. <em>Mise en place</em> - everything in its place.
+            Experiment with your own arrangement. The key is finding a layout that prevents overwhelm when multiple
+            tasks demand attention simultaneously. Keep all tabs and applications open when closing your laptop so
+            everything reopens in the correct position the next day. <em>Mise en place</em> - everything in its place.
         </div>
 
         <h2 id="lmw">LEAD MANAGEMENT WORKFLOW</h2>
 
         <h3>Daily Start Routine</h3>
-        
+
         <div class="highlight-box">
             <strong>Step 1: Check SMS Magic (All Scenters)</strong><br>
             Review all three Scenters' SMS Magic for responses to:<br>
@@ -377,12 +386,14 @@
         </div>
 
         <div class="info-box">
-            <strong>Note:</strong> If someone responds to a text but there's no outgoing message from you in the thread, they're responding to an automated marketing text.
+            <strong>Note:</strong> If someone responds to a text but there's no outgoing message from you in the thread,
+            they're responding to an automated marketing text.
         </div>
 
         <div class="highlight-box">
             <strong>Step 2: Call New Leads (Priority #1)</strong><br>
-             New Leads are <span class="emphasis">hot leads</span> and must be contacted as quickly as possible throughout the day.
+            New Leads are <span class="emphasis">hot leads</span> and must be contacted as quickly as possible
+            throughout the day.
         </div>
 
         <h4>New Lead Standards:</h4>
@@ -392,11 +403,13 @@
             <li>Leads generate overnight, so process morning leads first thing</li>
         </ul>
 
-         <div class="highlight-box">
+        <div class="highlight-box">
             <strong>Step 3: Active Trial Leads</strong><br>
             Begin contacting the Active Trial Leads for all three scenters. <br>
-            • I rotate through each scenter’s active trial leads in batches of 10 to ensure every location receives equal attention throughout the day.<br>
-            • Feel free to experiment with a workflow that fits your style, but make sure Active Trial Leads are always contacted in the correct call and text order.
+            • I rotate through each scenter’s active trial leads in batches of 10 to ensure every location receives
+            equal attention throughout the day.<br>
+            • Feel free to experiment with a workflow that fits your style, but make sure Active Trial Leads are always
+            contacted in the correct call and text order.
         </div>
 
         <h2 id="ocp">OUTBOUND CALL PROTOCOL</h2>
@@ -410,8 +423,10 @@
                     <li>Call the lead</li>
                     <li>If no answer: Leave voicemail</li>
                     <li>Send SMS (unless FOSA shows they received an automated marketing text that same day)</li>
-                    <li>If they received a text the previous day, send a personal text to differentiate from automated messages</li>
-                    <li>Mark as <b>Called - Left Voicemail</b> with comment "[Initials] - left VM and sent SMS" in <strong>FOSA</strong> </li>
+                    <li>If they received a text the previous day, send a personal text to differentiate from automated
+                        messages</li>
+                    <li>Mark as <b>Called - Left Voicemail</b> with comment "[Initials] - left VM and sent SMS" in
+                        <strong>FOSA</strong> </li>
                 </ol>
             </div>
 
@@ -420,53 +435,69 @@
                 <ol>
                     <li>Call again</li>
                     <li>If no answer: Do NOT leave voicemail</li>
-                    <li>Mark as <b>Called - Connected</b> with comment "[Initials] - 2nd contact no VM" in <strong>FOSA</strong></li>
+                    <li>Mark as <b>Called - Connected</b> with comment "[Initials] - 2nd contact no VM" in
+                        <strong>FOSA</strong></li>
                 </ol>
             </div>
 
             <div class="day-card">
                 <div class="day-number">Day 3</div>
-                <p style="text-align: center; font-weight: 600; margin-top: 20px;">Send a text</p> <p style="text-align: left; font-weight: 400;">It’s good practice to create multiple message variations with different tones so we aren’t sending the same text repeatedly to our leads.
-                <br> <br>
-                Mark as <b>Texted</b> with comment "[Initials] - sent SMS" in <strong>FOSA</strong></p>
+                <p style="text-align: center; font-weight: 600; margin-top: 20px;">Send a text</p>
+                <p style="text-align: left; font-weight: 400;">It’s good practice to create multiple message variations
+                    with different tones so we aren’t sending the same text repeatedly to our leads.
+                    <br> <br>
+                    Mark as <b>Texted</b> with comment "[Initials] - sent SMS" in <strong>FOSA</strong>
+                </p>
             </div>
 
             <div class="day-card">
                 <div class="day-number">Day 4</div>
-                <p style="text-align: center; font-weight: 600; margin-top: 20px;">Call and leave another voicemail</p> <p style="text-align: left; font-weight: 400;">Again, vary the tone and content in your voicemails so we don’t sound scripted or lacking in care and conviction.
-                <br> <br>
-                Mark as <b>Called - Left Voicemail</b> with comment <br> "[Initials]" in <strong>FOSA</strong></p>
+                <p style="text-align: center; font-weight: 600; margin-top: 20px;">Call and leave another voicemail</p>
+                <p style="text-align: left; font-weight: 400;">Again, vary the tone and content in your voicemails so we
+                    don’t sound scripted or lacking in care and conviction.
+                    <br> <br>
+                    Mark as <b>Called - Left Voicemail</b> with comment <br> "[Initials]" in <strong>FOSA</strong>
+                </p>
             </div>
 
             <div class="day-card">
                 <div class="day-number">Days 5+</div>
                 <ul style="margin-left: 0;">
-                    <li>Alternate between texting and voicemail by day with correct marks and comments in <strong>FOSA</strong></li>
+                    <li>Alternate between texting and voicemail by day with correct marks and comments in
+                        <strong>FOSA</strong></li>
                     <li>Around Day 5-6: If no response, pause outreach for a couple days</li>
                 </ul>
             </div>
         </div>
 
         <div class="warning-box">
-            <strong>Important Philosophies:</strong> We are persistent, not spammers. Use your judgment. If outreach feels too heavy, pause temporarily.
+            <strong>Important Philosophies:</strong> We are persistent, not spammers. Use your judgment. If outreach
+            feels too heavy, pause temporarily.
             <br>
             <br>
-            Sometimes you’ll connect with a lead who expresses frustration, whether it’s about the number of messages they’ve received, the questions we need to ask, or some of our policies. It’s important <strong>not</strong> to meet that energy. <b><em>Stay calm and professional</em></b>. Remember, we are simply doing our job, and our goal is to help. Respond with understanding and keep your focus on providing support.
+            Sometimes you’ll connect with a lead who expresses frustration, whether it’s about the number of messages
+            they’ve received, the questions we need to ask, or some of our policies. It’s important <strong>not</strong>
+            to meet that energy. <b><em>Stay calm and professional</em></b>. Remember, we are simply doing our job, and
+            our goal is to help. Respond with understanding and keep your focus on providing support.
             <br>
             <br>
-            <i>"You cannot control the behavior of others, but you can always choose how you respond to it." ⏤ Roy T. Bennett</i>
+            <i>"You cannot control the behavior of others, but you can always choose how you respond to it." ⏤ Roy T.
+                Bennett</i>
         </div>
 
         <h2 id="tbp">TRIAL BOOKING PROCESS</h2>
 
         <h3>Required Information Checklist</h3>
-        <p>When a lead converts and wants to book a trial appointment, collect the following information to complete their MyTime profile:</p>
+        <p>When a lead converts and wants to book a trial appointment, collect the following information to complete
+            their MyTime profile:</p>
 
-         <div class="info-box">
-            You should gather this information, whether over the phone or by text, and update their MyTime profile in real time as you’re speaking with them.
+        <div class="info-box">
+            You should gather this information, whether over the phone or by text, and update their MyTime profile in
+            real time as you’re speaking with them.
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 30px 0;">
+        <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 30px 0;">
             <div>
                 <h4 style="color: #FF6B35;">Pet Parent Information:</h4>
                 <ul class="checklist">
@@ -498,12 +529,17 @@
         </div>
 
         <div class="info-box">
-            <strong>If they have the document:</strong> Text them the correct Scenter email after the call so they can send it over. If they only have a hard copy, ask them to bring it to their appointment.<br><br>
-            <strong>If they don't have the document:</strong> Call their veterinarian and request that the rabies certificate be emailed to the appropriate Scenter address. <b>Note</b> that if the vaccine was done through Vetco, the pet parent must obtain the document themselves, as <u>Vetco only releases records directly to them.</u>
+            <strong>If they have the document:</strong> Text them the correct Scenter email after the call so they can
+            send it over. If they only have a hard copy, ask them to bring it to their appointment.<br><br>
+            <strong>If they don't have the document:</strong> Call their veterinarian and request that the rabies
+            certificate be emailed to the appropriate Scenter address. <b>Note</b> that if the vaccine was done through
+            Vetco, the pet parent must obtain the document themselves, as <u>Vetco only releases records directly to
+                them.</u>
         </div>
 
         <h3>Gathering Intelligence for Service Quality</h3>
-        <p>The following information directly impacts the quality of service and trial conversion rates. Take detailed notes.</p>
+        <p>The following information directly impacts the quality of service and trial conversion rates. Take detailed
+            notes.</p>
 
         <div class="info-box">
             <strong>Temperament & Mobility:</strong><br>
@@ -527,20 +563,23 @@
                 <li><strong>Critical:</strong> Ask about mats or tangles</li>
                 <li>Explain that getting mats wet can worsen them</li>
                 <li>Obtain consent to trim out mats if necessary</li>
-                <li><strong>Sales opportunity:</strong> Recommend brush out and blow dry service for dogs prone to matting</li>
+                <li><strong>Sales opportunity:</strong> Recommend brush out and blow dry service for dogs prone to
+                    matting</li>
             </ul>
         </div>
 
         <div class="info-box">
             <strong>Pet Parent Expectations:</strong><br>
-            Understand what they're hoping to achieve from the trial and ongoing services. This helps the team tailor their approach.
+            Understand what they're hoping to achieve from the trial and ongoing services. This helps the team tailor
+            their approach.
         </div>
 
         <h2 id="tcf">TRIAL CONVERSION FORMS</h2>
 
         <div class="warning-box">
             <strong>Non-Negotiable Rule:</strong><br>
-            <span class="emphasis">Every trial booking requires a completed Trial Conversion form in Kintone. No exceptions.</span>
+            <span class="emphasis">Every trial booking requires a completed Trial Conversion form in Kintone. No
+                exceptions.</span>
         </div>
 
         <h3>Form Purpose</h3>
@@ -557,10 +596,11 @@
 
         <div class="info-box">
             <strong>Top Fields:</strong><br>
-            Link to MyTime Profile, Location of Trial Appointment, Date of Trial Appointment, Time of Trial Appointment, Dog Name(s), Pet Parent Name(s).
+            Link to MyTime Profile, Location of Trial Appointment, Date of Trial Appointment, Time of Trial Appointment,
+            Dog Name(s), Pet Parent Name(s).
         </div>
 
-         <div class="info-box">
+        <div class="info-box">
             <strong>Services Booked:</strong><br>
             Check the appropriate boxes for the services that are booked in the trial appointment.
         </div>
@@ -581,23 +621,30 @@
 
         <div class="info-box">
             <strong>Coat Condition/General Upkeep:</strong><br>
-            For short-hair dogs this can be a simple "short hair/regular shed." For medium or long-hair dogs give a more in-depth response such as "brushes at home, shouldn't have any mats or tangles." or "PP said they were pretty bad about brushing, may have mats behind ears. PP said OK to clip mats as needed."
+            For short-hair dogs this can be a simple "short hair/regular shed." For medium or long-hair dogs give a more
+            in-depth response such as "brushes at home, shouldn't have any mats or tangles." or "PP said they were
+            pretty bad about brushing, may have mats behind ears. PP said OK to clip mats as needed."
         </div>
 
         <div class="info-box">
             <strong>Description of Conversation:</strong><br>
-            Include all relevant information gathered during the booking call that will help the team succeed. This is your opportunity to paint a complete picture.<br><br>
-<span style="color: #FF6B35; font-weight: 600;">Critical Step:</span> After completing the Kintone form, copy the Description of Conversation and paste it into the client's MyTime profile. Pin this note so it's visible to all team members during the appointment.
+            Include all relevant information gathered during the booking call that will help the team succeed. This is
+            your opportunity to paint a complete picture.<br><br>
+            <span style="color: #FF6B35; font-weight: 600;">Critical Step:</span> After completing the Kintone form,
+            copy the Description of Conversation and paste it into the client's MyTime profile. Pin this note so it's
+            visible to all team members during the appointment.
         </div>
 
         <div class="info-box">
             <strong>Sales Pitch Ideas:</strong><br>
-            Based on your conversation, suggest specific approaches the team should take. What information should they emphasize? What concerns should they address?
+            Based on your conversation, suggest specific approaches the team should take. What information should they
+            emphasize? What concerns should they address?
         </div>
 
         <div class="highlight-box">
             <strong style="color: #FF6B35;">The Bottom Line:</strong><br>
-            The more detailed and thoughtful your Trial Conversion form, the better equipped the team is to convert that trial into a member. This form is the bridge between LEASH and the in-person team.
+            The more detailed and thoughtful your Trial Conversion form, the better equipped the team is to convert that
+            trial into a member. This form is the bridge between LEASH and the in-person team.
         </div>
 
         <div class="btw">
@@ -605,10 +652,12 @@
         </div>
 
         <div class="closing-box">
-            <h2>TRAINING COMPLETE <img src="https://media1.tenor.com/m/-95wSnVmrLIAAAAC/vec50b-vec50yay.gif" alt="Celebration GIF" style="height: 120px; vertical-align: text-bottom;"></h2>
-            
-            <p style="font-size: 1.1em; margin: 20px 0;">You now have the foundational knowledge to perform in the LEASH role effectively. Remember:</p>
-            
+            <h2>TRAINING COMPLETE <img src="https://media1.tenor.com/m/-95wSnVmrLIAAAAC/vec50b-vec50yay.gif"
+                    alt="Celebration GIF" style="height: 120px; vertical-align: text-bottom;"></h2>
+
+            <p style="font-size: 1.1em; margin: 20px 0;">You now have the foundational knowledge to perform in the LEASH
+                role effectively. Remember:</p>
+
             <ul style="font-size: 1.05em; line-height: 1.8;">
                 <li>Stay organized with your workspace setup</li>
                 <li>Prioritize New Leads above all else</li>
@@ -617,18 +666,23 @@
                 <li>Complete every Trial Conversion form thoroughly</li>
             </ul>
 
-            <p style="font-size: 1.1em; margin-top: 30px; font-style: italic;">Success in this role comes from consistency, attention to detail, and clear communication with the Scenter teams.</p>
+            <p style="font-size: 1.1em; margin-top: 30px; font-style: italic;">Success in this role comes from
+                consistency, attention to detail, and clear communication with the Scenter teams.</p>
         </div>
 
-        <div style="background: #f0f9ff; border: 3px solid #00A0DC; padding: 30px; margin: 40px 0 0 0; border-radius: 8px; text-align: center;">
+        <div
+            style="background: #f0f9ff; border: 3px solid #00A0DC; padding: 30px; margin: 40px 0 0 0; border-radius: 8px; text-align: center;">
             <h2 style="color: #00A0DC; margin-top: 0;" id="kc">Ready to Test Your Knowledge?</h2>
-            <p style="font-size: 1.1em; color: #555; margin: 20px 0;">Complete the LEASH Role Knowledge Check to demonstrate your understanding of the training material.</p>
-            
-            <a href="https://forms.gle/XdBXKQ2pWHkJJVUH8" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #00A0DC 0%, #0077B6 100%); color: white; padding: 15px 40px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1em; margin-top: 10px; transition: transform 0.2s;">
+            <p style="font-size: 1.1em; color: #555; margin: 20px 0;">Complete the LEASH Role Knowledge Check to
+                demonstrate your understanding of the training material.</p>
+
+            <a href="https://forms.gle/XdBXKQ2pWHkJJVUH8" target="_blank"
+                style="display: inline-block; background: linear-gradient(135deg, #00A0DC 0%, #0077B6 100%); color: white; padding: 15px 40px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1em; margin-top: 10px; transition: transform 0.2s;">
                 Complete Knowledge Check →
             </a>
-            
-            <p style="font-size: 0.9em; color: #666; margin-top: 15px; font-style: italic;">You'll need to sign in with your Google account. Results are tracked for training completion.</p>
+
+            <p style="font-size: 0.9em; color: #666; margin-top: 15px; font-style: italic;">You'll need to sign in with
+                your Google account. Results are tracked for training completion.</p>
         </div>
 
         <div style="text-align: center; padding: 40px 20px; color: #0077B6; margin-top: 0;">
@@ -639,38 +693,39 @@
             Created by Nate Graves
         </div>
     </div>
-        <!-- back to top button HTML -->
-     <button id="backToTop" title="Back to top">↑</button>
-<!-- Javascript Section -->
+    <!-- back to top button HTML -->
+    <button id="backToTop" title="Back to top">↑</button>
+    <!-- Javascript Section -->
 
-   <!-- Scroll Shrink Nav Bar -->
-        <script>
-window.addEventListener("scroll", () => {
-    const nav = document.querySelector(".top-nav");
-    if (window.scrollY > 50) {
-        nav.classList.add("shrink");
-    } else {
-        nav.classList.remove("shrink");
-    }
-});
-</script>
+    <!-- Scroll Shrink Nav Bar -->
+    <script>
+        window.addEventListener("scroll", () => {
+            const nav = document.querySelector(".top-nav");
+            if (window.scrollY > 50) {
+                nav.classList.add("shrink");
+            } else {
+                nav.classList.remove("shrink");
+            }
+        });
+    </script>
     <!-- back to top button Java -->
     <script>
-const backToTopBtn = document.getElementById("backToTop");
+        const backToTopBtn = document.getElementById("backToTop");
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 400) {
-        backToTopBtn.classList.add("show");
-    } else {
-        backToTopBtn.classList.remove("show");
-    }
-});
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add("show");
+            } else {
+                backToTopBtn.classList.remove("show");
+            }
+        });
 
-backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-});
-</script>
+        backToTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
 
 
 </body>
+
 </html>
